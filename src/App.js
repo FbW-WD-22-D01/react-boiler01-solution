@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <h1>Übung für Komponenten</h1>
+        {/* Die Row und Col Komponenten kommt von Bootstrap und ermöglichen das responive Verhalten */}
         <Row xs={1} sm={2} md={3} xl={4} >
             {data.map((el,index) =>{
               return(
