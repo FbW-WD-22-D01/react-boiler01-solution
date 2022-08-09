@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {data} from './data.js'
+import CardComponent from './CardComponent';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Übung für Komponenten</h1>
+        <Row xs={1} sm={2} md={3} xl={4} >
+            {data.map((el,index) =>{
+              return(
+                <Col>
+                  <CardComponent key={`meinKey-${index}`} info={el} /> 
+                </Col>)
+            })}
+        </Row>
     </div>
   );
 }
